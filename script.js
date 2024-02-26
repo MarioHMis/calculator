@@ -11,7 +11,7 @@ buttons.forEach((button) => {
     }
 
     if (button.id === 'delete') {
-      if (screen.textContent.length === 1) {
+      if (screen.textContent.length === 1 || screen.textContent === 'Error') {
         screen.textContent = '0';
       } else {
         screen.textContent = screen.textContent.slice(0, -1);
@@ -30,7 +30,7 @@ buttons.forEach((button) => {
       return;
     }
 
-    if (screen.textContent === '0') {
+    if (screen.textContent === '0' || screen.textContent === 'Error') {
       screen.textContent = pushbutton;
     } else {
       screen.textContent += pushbutton;
